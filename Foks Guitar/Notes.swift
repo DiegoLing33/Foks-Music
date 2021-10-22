@@ -33,15 +33,52 @@ enum ChordModifier: String {
          major = ""
 }
 
-/// Нота
+/// The note
 struct Note: RawRepresentable {
     
     
     // Notes
     static let C = Note(.C)
+    static let CSharp = Note(.C, sharp: true)
+    static let D = Note(.D)
+    static let DSharp = Note(.D, sharp: true)
+    static let E = Note(.E)
+    static let F = Note(.F)
+    static let FSharp = Note(.F, sharp: true)
+    static let G = Note(.G)
+    static let GSharp = Note(.G, sharp: true)
+    static let A = Note(.A)
+    static let ASharp = Note(.A, sharp: true)
+    static let B = Note(.B)
+    
+    /// List of all of the notes
+    static let List = [
+        Note.C,
+        Note.CSharp,
+        Note.D,
+        Note.DSharp,
+        Note.E,
+        Note.F,
+        Note.FSharp,
+        Note.G,
+        Note.GSharp,
+        Note.A,
+        Note.ASharp,
+        Note.B,
+    ]
+    
+    /// List of all whole notes (not sharp)
+    static let WholeNotesList = [
+        Note.C,
+        Note.D,
+        Note.E,
+        Note.F,
+        Note.G,
+        Note.A,
+        Note.B
+    ]
     
     // Class
-    
     typealias RawValue = String
     
     var rawValue: String {
